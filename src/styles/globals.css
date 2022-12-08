@@ -56,10 +56,14 @@ body {
   color: #ff4135;
   font-style: normal;
 }
+.merchant-page .section-heading h3 span,
+.merchant-page .section-heading h3 i {
+  color: #0076f9;
+}
 button {
   cursor: pointer;
 }
-a {
+.zuumdrop-app a {
   text-decoration: none;
 }
 /* header */
@@ -131,4 +135,5 @@ header {
 }
 .header-right a:hover {
   transform: translate(0, -0.5rem);
+  color: var(--white);
 }

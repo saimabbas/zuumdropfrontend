@@ -350,9 +350,14 @@
   outline: 0;
   color: var(--white);
   margin: 2.5rem 0 0 0;
+  transition: 0.35s;
   position: relative;
   z-index: 10;
 }
+.zuum-services-grid-card button:hover {
+  box-shadow: 0 5px 7px rgba(0, 0, 0, 0.05);
+}
+
 .zuum-services-grid-card:hover {
   transform: translate(0, -1rem);
 }
