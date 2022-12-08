@@ -93,15 +93,23 @@
   width: max-content;
   position: relative;
 }
+.appstores-container {
+  width: max-content;
+  position: absolute;
+  bottom: 5rem;
+  left: 0%;
+  transform: translate(0%, 0);
+}
+.appstores-container p {
+  font-size: 1.5rem;
+  color: var(--white);
+  margin: 0 0 1.5rem 0;
+}
 .hero-appstores-box {
   width: max-content;
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  position: absolute;
-  bottom: 5rem;
-  left: 0%;
-  transform: translate(0%, 0);
 }
 .hero-appstores-box svg {
   max-height: 5rem;
@@ -215,13 +223,13 @@
 }
 .how-zuum-works-section {
   width: 100%;
-  padding: 10rem 0 0 0;
+  padding: 10rem 0;
   background-color: var(--white);
 }
 .hzw-grid {
   width: 100%;
   max-width: 1150px;
-  margin: 10rem auto 0 auto;
+  margin: 10rem auto 10rem auto;
   display: grid;
   grid-template-columns: 1fr max-content 1fr max-content 1fr;
   grid-template-rows: auto;
@@ -373,7 +381,7 @@
 .reviews-section {
   width: 100%;
   background-color: var(--bg-color);
-  padding: 15rem 0 10rem 0;
+  padding: 10rem 0;
 }
 .reviews-swiper-container .swiper {
   width: 100%;
@@ -464,7 +472,6 @@
   display: grid;
   grid-template-columns: 1fr;
   grid-gap: 1.5rem;
-  max-width: 1150px;
   margin: 7.5rem auto 0 auto;
 }
 .delivering-grid {
@@ -479,7 +486,7 @@
   align-items: center;
   justify-content: center;
   margin: 0 1.5rem 0 0;
-  padding: 2.5rem 3.5rem;
+  padding: 2.5rem 2.5rem;
   border-radius: 1rem;
   background-color: var(--bg-color);
   /* box-shadow: 0 3px 5px rgba(0, 0, 0, 0.035); */
@@ -490,7 +497,7 @@
   color: #3d424d;
 }
 .delivering-grid-card img {
-  width: 5rem;
+  width: 6.5rem;
   object-fit: contain;
   margin: 0 1.5rem 0 0;
 }
@@ -559,7 +566,7 @@ footer {
   border-top: 1px solid rgba(0, 0, 0, 0.075);
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
 }
 .footer-bottom-grid p {
   font-size: 1.5rem;

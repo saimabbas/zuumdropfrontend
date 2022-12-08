@@ -75,5 +75,60 @@ header {
 .hero-logo {
   max-height: 4rem;
   object-fit: contain;
-  margin: 0 0 7.5rem 0;
+}
+.home-page .header-content {
+  width: 75%;
+}
+.header-content {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.header-right {
+  width: max-content;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.header-right a {
+  font-size: 1.5rem;
+  color: var(--white);
+  transition: 0.35s;
+  margin: 0 3rem 0 0;
+}
+.header-right button:nth-child(3) {
+  font-size: 1.5rem;
+  padding: 0.85rem 2rem;
+  border-radius: 0.5rem;
+  border: 0;
+  outline: 0;
+  color: var(--white);
+  position: relative;
+  background-color: transparent;
+  z-index: 10;
+  border: 1px solid var(--white);
+  transition: 0.35s;
+}
+.header-right button:nth-child(4) {
+  font-size: 1.5rem;
+  padding: 0.85rem 2rem;
+  border-radius: 0.5rem;
+  border: 0;
+  outline: 0;
+  color: var(--black);
+  position: relative;
+  z-index: 10;
+  background-color: var(--white);
+  border: 1px solid var(--white);
+  transition: 0.35s;
+  margin: 0 0 0 1.5rem;
+}
+
+.header-right button:hover {
+  transform: translate(0, -0.5rem);
+  box-shadow: 0 5px 7px rgba(255, 255, 255, 0.15);
+}
+.header-right a:hover {
+  transform: translate(0, -0.5rem);
 }
