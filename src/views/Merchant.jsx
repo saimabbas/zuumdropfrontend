@@ -27,9 +27,10 @@ import ReviewsImg from "../assets/img/reviews-img.png";
 import AppstoreImg from "../assets/img/appstore.png";
 import GoogleplayImg from "../assets/img/googleplay.png";
 import GroceriesImg from "../assets/img/groceries.png";
-import DownArrowImg from "../assets/img/down-arrow.png";
 import Lottie from "react-lottie";
 import PaperplaneJson from "../assets/paperplane.json";
+import Marquee, { Motion, randomIntFromInterval } from "react-marquee-slider";
+import times from "lodash/times";
 
 // Components
 import gsap from "gsap";
@@ -46,7 +47,6 @@ import {
 import { SplitText } from "gsap/SplitText";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { ScrollSmoother } from "gsap/ScrollSmoother";
-import Marquee from "react-marquee-slider";
 import { IoLocationOutline, IoSearchOutline } from "react-icons/io5";
 import {
   BsArrowRight,
@@ -474,8 +474,7 @@ const Home = () => {
                     </h3>
                   </div>
                   <div className="hzw-grid">
-                    <div data-speed={1.3} className="hzw-grid-card">
-                      <span className="cursive-text">1</span>
+                    <div className="hzw-grid-card">
                       <img src={HZWImg1} alt="" />
                       <h4 className="cursive-text">Customer Places order</h4>
                       <p>
@@ -483,23 +482,14 @@ const Home = () => {
                         Business Places An Order Through ZuumDrop App.
                       </p>
                     </div>
-                    <div data-speed={1.3} className="downarrow-box">
-                      <img src={DownArrowImg} alt="" />
-                    </div>
-                    <div data-speed={1.2} className="hzw-grid-card">
-                      <span className="cursive-text">2</span>
+                    <div className="hzw-grid-card">
                       <img src={HZWImg2} alt="" />
                       <h4 className="cursive-text">Merchant Prepares Order </h4>
                       <p>
                         The Merchant Accepts The Order And Prepares The Order.
                       </p>
                     </div>
-                    <div data-speed={1.2} className="downarrow-box">
-                      <img src={DownArrowImg} alt="" />
-                    </div>
-
-                    <div data-speed={1.1} className="hzw-grid-card">
-                      <span className="cursive-text">3</span>
+                    <div className="hzw-grid-card">
                       <img src={HZWImg3} alt="" />
                       <h4 className="cursive-text">
                         Droppers Arrive & <br /> Drops Off Food{" "}
