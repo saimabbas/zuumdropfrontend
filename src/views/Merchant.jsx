@@ -363,7 +363,7 @@ const Home = () => {
                     </h3>
                   </div>
                   <div className="why-zuumdrop-grid">
-                    <div className="why-zuumdrop-grid-card">
+                    <div data-speed={1.15} className="why-zuumdrop-grid-card">
                       <h3 className="cursive-text">
                         More Customers, More Money💰
                       </h3>
@@ -373,7 +373,7 @@ const Home = () => {
                         Get More Customers Through Our In-App Marketing Program.
                       </p>
                     </div>
-                    <div className="why-zuumdrop-grid-card">
+                    <div data-speed={1.25} className="why-zuumdrop-grid-card">
                       <h3 className="cursive-text">You Cook We Deliver 📦</h3>
                       <p>
                         Finding Drivers These Days Can Be Difficult, No Need To
@@ -382,7 +382,7 @@ const Home = () => {
                         Efficient To Your Customers.
                       </p>
                     </div>
-                    <div className="why-zuumdrop-grid-card">
+                    <div data-speed={1.35} className="why-zuumdrop-grid-card">
                       <h3 className="cursive-text">
                         More Data And Insights = Success ⭐
                       </h3>
