@@ -62,3 +62,18 @@ button {
 a {
   text-decoration: none;
 }
+/* header */
+
+header {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 3.5rem 0;
+  z-index: 1000;
+}
+.hero-logo {
+  max-height: 4rem;
+  object-fit: contain;
+  margin: 0 0 7.5rem 0;
+}

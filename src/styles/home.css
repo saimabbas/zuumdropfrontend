@@ -18,6 +18,25 @@
   flex-direction: column;
   align-items: center;
 }
+.chat-icon {
+  width: 5rem;
+  height: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: linear-gradient(90deg, #ff7a4d 0%, #ff482a 100.68%);
+  position: fixed;
+  bottom: 2.5rem;
+  right: 2.5rem;
+  font-size: 2.25rem;
+  color: var(--white);
+  cursor: pointer;
+  transition: 0.35s;
+}
+.chat-icon:hover {
+  transform: scale(1.1);
+}
 .groceries-img {
   width: 100vw;
   object-fit: contain;
@@ -73,11 +92,6 @@
 .hero-heading-box {
   width: max-content;
   position: relative;
-}
-.hero-logo {
-  max-height: 4rem;
-  object-fit: contain;
-  margin: 0 0 7.5rem 0;
 }
 .hero-appstores-box {
   width: max-content;
@@ -195,14 +209,6 @@
 /* .hero-section-content button:hover::before {
   transform: translate(0, 0);
 } */
-header {
-  width: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  padding: 3.5rem 0;
-  z-index: 1000;
-}
 .delivering-to-section {
   width: 100%;
   padding: 10rem 0;
@@ -418,13 +424,18 @@ header {
   border-radius: 1000px;
   background: linear-gradient(90deg, #ff7a4d, #ff482a);
 }
+.delivering-grid-container {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 1.5rem;
+  max-width: 1150px;
+  margin: 7.5rem auto 0 auto;
+}
 .delivering-grid {
   width: 100%;
-  margin: 7.5rem 0 0 0;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  max-width: 1000px;
   margin: 7.5rem auto 0 auto;
 }
 .delivering-grid-card {
@@ -432,16 +443,21 @@ header {
   display: flex;
   align-items: center;
   justify-content: center;
+  margin: 0 1.5rem 0 0;
+  padding: 2.5rem 3.5rem;
+  border-radius: 1rem;
+  background-color: var(--bg-color);
+  /* box-shadow: 0 3px 5px rgba(0, 0, 0, 0.035); */
 }
 .delivering-grid-card h6 {
-  font-size: 2rem;
+  font-size: 2.25rem;
   font-weight: 700;
   color: #3d424d;
 }
 .delivering-grid-card img {
-  width: 3.5rem;
+  width: 5rem;
   object-fit: contain;
-  margin: 0 1rem 0 0;
+  margin: 0 1.5rem 0 0;
 }
 footer {
   width: 100%;

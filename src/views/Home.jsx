@@ -29,6 +29,8 @@ import GoogleplayImg from "../assets/img/googleplay.png";
 import GroceriesImg from "../assets/img/groceries.png";
 import Lottie from "react-lottie";
 import PaperplaneJson from "../assets/paperplane.json";
+import Marquee, { Motion, randomIntFromInterval } from "react-marquee-slider";
+import times from "lodash/times";
 
 // Components
 import gsap from "gsap";
@@ -53,6 +55,7 @@ import {
   BsFacebook,
   BsTwitter,
   BsLinkedin,
+  BsChatLeftDotsFill,
 } from "react-icons/bs";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { EffectCoverflow, Pagination, Autoplay } from "swiper";
@@ -181,7 +184,7 @@ const Home = () => {
                     <button>
                       <span>
                         <img src={ChocolateImg} alt="" />
-                        <i>Order Now</i>
+                        <i>Join Waitless Of ZuumDrop Launch</i>
                         <img src={BurgerImg} alt="" />
                       </span>
                     </button>
@@ -285,28 +288,129 @@ const Home = () => {
                 <div className="delivering-to-content">
                   <div className="section-heading">
                     <h3 className="cursive-text">
-                      <span className="cursive-text">D</span>
-                      elivering To
+                      <span className="cursive-text">E</span>
+                      verything You Need
                       <i className="cursive-text">.</i>
                     </h3>
                   </div>
-                  <div className="delivering-grid">
-                    <div className="delivering-grid-card">
-                      <img src={CakeImg} alt="CakeImg" />
-                      <h6>Orlando</h6>
-                    </div>
-                    <div className="delivering-grid-card">
-                      <img src={PizzaImg} alt="CakeImg" />
-                      <h6>Miami</h6>
-                    </div>
-                    <div className="delivering-grid-card">
-                      <img src={ChocolateImg} alt="CakeImg" />
-                      <h6>Tampa</h6>
-                    </div>
-                    <div className="delivering-grid-card">
-                      <img src={BurgerImg} alt="CakeImg" />
-                      <h6>Jacksonville</h6>
-                    </div>
+                  <div className="delivering-grid-container">
+                    <Marquee
+                      velocity={10}
+                      minScale={0.7}
+                      resetAfterTries={200}
+                      direction="ltr"
+                    >
+                      <div className="delivering-grid-card">
+                        <img src={CakeImg} alt="CakeImg" />
+                        <h6>Orlando</h6>
+                      </div>
+                      <div className="delivering-grid-card">
+                        <img src={PizzaImg} alt="CakeImg" />
+                        <h6>Miami</h6>
+                      </div>
+                      <div className="delivering-grid-card">
+                        <img src={ChocolateImg} alt="CakeImg" />
+                        <h6>Tampa</h6>
+                      </div>
+                      <div className="delivering-grid-card">
+                        <img src={BurgerImg} alt="CakeImg" />
+                        <h6>Jacksonville</h6>
+                      </div>
+                      <div className="delivering-grid-card">
+                        <img src={CakeImg} alt="CakeImg" />
+                        <h6>Orlando</h6>
+                      </div>
+                      <div className="delivering-grid-card">
+                        <img src={PizzaImg} alt="CakeImg" />
+                        <h6>Miami</h6>
+                      </div>
+                      <div className="delivering-grid-card">
+                        <img src={ChocolateImg} alt="CakeImg" />
+                        <h6>Tampa</h6>
+                      </div>
+                      <div className="delivering-grid-card">
+                        <img src={BurgerImg} alt="CakeImg" />
+                        <h6>Jacksonville</h6>
+                      </div>
+                    </Marquee>
+                    <Marquee
+                      velocity={15}
+                      minScale={0.7}
+                      resetAfterTries={200}
+                      direction="rtl"
+                    >
+                      <div className="delivering-grid-card">
+                        <img src={CakeImg} alt="CakeImg" />
+                        <h6>Orlando</h6>
+                      </div>
+                      <div className="delivering-grid-card">
+                        <img src={PizzaImg} alt="CakeImg" />
+                        <h6>Miami</h6>
+                      </div>
+                      <div className="delivering-grid-card">
+                        <img src={ChocolateImg} alt="CakeImg" />
+                        <h6>Tampa</h6>
+                      </div>
+                      <div className="delivering-grid-card">
+                        <img src={BurgerImg} alt="CakeImg" />
+                        <h6>Jacksonville</h6>
+                      </div>
+                      <div className="delivering-grid-card">
+                        <img src={CakeImg} alt="CakeImg" />
+                        <h6>Orlando</h6>
+                      </div>
+                      <div className="delivering-grid-card">
+                        <img src={PizzaImg} alt="CakeImg" />
+                        <h6>Miami</h6>
+                      </div>
+                      <div className="delivering-grid-card">
+                        <img src={ChocolateImg} alt="CakeImg" />
+                        <h6>Tampa</h6>
+                      </div>
+                      <div className="delivering-grid-card">
+                        <img src={BurgerImg} alt="CakeImg" />
+                        <h6>Jacksonville</h6>
+                      </div>
+                    </Marquee>
+                    <Marquee
+                      velocity={20}
+                      minScale={0.7}
+                      resetAfterTries={200}
+                      direction="ltr"
+                    >
+                      <div className="delivering-grid-card">
+                        <img src={CakeImg} alt="CakeImg" />
+                        <h6>Orlando</h6>
+                      </div>
+                      <div className="delivering-grid-card">
+                        <img src={PizzaImg} alt="CakeImg" />
+                        <h6>Miami</h6>
+                      </div>
+                      <div className="delivering-grid-card">
+                        <img src={ChocolateImg} alt="CakeImg" />
+                        <h6>Tampa</h6>
+                      </div>
+                      <div className="delivering-grid-card">
+                        <img src={BurgerImg} alt="CakeImg" />
+                        <h6>Jacksonville</h6>
+                      </div>
+                      <div className="delivering-grid-card">
+                        <img src={CakeImg} alt="CakeImg" />
+                        <h6>Orlando</h6>
+                      </div>
+                      <div className="delivering-grid-card">
+                        <img src={PizzaImg} alt="CakeImg" />
+                        <h6>Miami</h6>
+                      </div>
+                      <div className="delivering-grid-card">
+                        <img src={ChocolateImg} alt="CakeImg" />
+                        <h6>Tampa</h6>
+                      </div>
+                      <div className="delivering-grid-card">
+                        <img src={BurgerImg} alt="CakeImg" />
+                        <h6>Jacksonville</h6>
+                      </div>
+                    </Marquee>
                   </div>
                 </div>
               </div>
@@ -399,7 +503,7 @@ const Home = () => {
                 </div>
               </div>
               <img
-                data-speed={1.15}
+                data-speed={1.1}
                 src={GroceriesImg}
                 className="groceries-img"
                 alt="GroceriesImg"
@@ -421,7 +525,7 @@ const Home = () => {
                         slidesPerView={"3"}
                         className="mySwiper"
                         loop={true}
-                        speed={1500}
+                        speed={1000}
                         effect={"coverflow"}
                         centeredSlides={true}
                         modules={[Autoplay, Pagination]}
@@ -604,6 +708,9 @@ const Home = () => {
             </footer>
           </main>
         </div>
+      </div>
+      <div className="chat-icon">
+        <BsChatLeftDotsFill />
       </div>
     </div>
   );
