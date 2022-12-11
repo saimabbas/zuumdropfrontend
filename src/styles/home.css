@@ -94,7 +94,7 @@
   position: relative;
 }
 .appstores-container {
-  width: max-content;
+  width: min-content;
   position: absolute;
   bottom: 5rem;
   left: 0%;
@@ -107,14 +107,14 @@
 }
 .hero-appstores-box {
   width: max-content;
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
+  display: grid;
+  grid-template-columns: max-content max-content;
+  grid-template-rows: auto;
+  grid-gap: 1.5rem;
 }
 .hero-appstores-box svg {
   max-height: 5rem;
   object-fit: contain;
-  margin: 0 2.5rem 0 0;
   background-color: var(--bg-color);
   border-radius: 0.5rem;
   padding: 0.5rem;
@@ -677,9 +677,6 @@ footer {
   .hero-section-content h1 {
     font-size: 5.5rem;
   }
-  .hero-appstores-box svg {
-    margin: 0 1rem;
-  }
   .hero-section-content button {
     padding: 1rem 1.5rem;
   }
@@ -731,5 +728,14 @@ footer {
   }
   .footer-top-grid-left > img {
     max-height: 3.5rem;
+  }
+  .gs-step-box {
+    padding: 1rem 1.5rem;
+  }
+  .get-started-box {
+    padding: 2.5rem 3.5rem;
+  }
+  .hzw-grid-card span {
+    left: 0;
   }
 }

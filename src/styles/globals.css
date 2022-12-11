@@ -144,13 +144,66 @@ header {
   transform: translate(0, -0.5rem);
   color: var(--white);
 }
+.home-page .header-mob {
+  background: linear-gradient(to right, #a80000, #ff4135);
+}
+.merchant-page .header-mob {
+  background: radial-gradient(
+    72.44% 124.62% at 46.84% 0%,
+    #0076f9 0%,
+    #0252c4 100%
+  );
+}
+.header-mob {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  background: linear-gradient(to right, #a80000, #ff4135);
+  top: 0;
+  left: 0;
+  z-index: 100001;
+}
+.header-mob-head {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 3.5rem 0 7.5rem 0;
+}
+.header-mob-head svg {
+  font-size: 2.5rem;
+  color: var(--white);
+}
+.header-mob-content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.header-mob-content a {
+  font-size: 1.75rem;
+  color: var(--white);
+  transition: 0.35s;
+  margin: 0 0 3rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.header-mob-content a svg {
+  font-size: 2.25rem;
+  margin: 0 1rem 0 0;
+}
+.header-right div svg {
+  font-size: 2.5rem;
+  color: var(--white);
+}
 @media screen and (max-width: 1000px) {
   .home-page .header-content {
     width: 100%;
   }
 }
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 775px) {
   .box {
-    padding: 0 2rem;
+    padding: 0 2.5rem;
   }
 }

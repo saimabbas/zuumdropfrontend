@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 
 // Styles
 import "../styles/globals.css";
@@ -57,6 +57,7 @@ import {
 import { SplitText } from "gsap/SplitText";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { ScrollSmoother } from "gsap/ScrollSmoother";
+import { MdClose, MdMenu } from "react-icons/md";
 import Marquee from "react-marquee-slider";
 import { IoLocationOutline, IoSearchOutline } from "react-icons/io5";
 import {
@@ -67,6 +68,8 @@ import {
   BsTwitter,
   BsLinkedin,
   BsChatLeftDotsFill,
+  BsTruck,
+  BsBoxSeam,
 } from "react-icons/bs";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { EffectCoverflow, Pagination, Autoplay } from "swiper";
@@ -76,6 +79,8 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import InputGroup from "react-bootstrap/InputGroup";
 
 const Home = () => {
+  const [isHeaderMobShowing, setIsHeaderMobShowing] = useState(false);
+
   gsap.registerPlugin(SplitText, ScrollSmoother, ScrollTrigger);
   const defaultOptions = {
     loop: true,
@@ -86,11 +91,26 @@ const Home = () => {
     },
   };
   useEffect(() => {
-    ScrollSmoother.create({
-      smooth: 1.15,
-      effects: true,
-      smoothTouch: 0,
-    });
+    function myFunction(x) {
+      if (x.matches) {
+        // If media query matches
+        ScrollSmoother.create({
+          smooth: 1.15,
+          effects: false,
+          smoothTouch: 0,
+        });
+      } else {
+        ScrollSmoother.create({
+          smooth: 1.15,
+          effects: true,
+          smoothTouch: 0,
+        });
+      }
+    }
+    var x = window.matchMedia("(max-width: 1000px)");
+    myFunction(x); // Call listener function at run time
+    x.addListener(myFunction); // Attach listener function on state changes
+
     let landingAnim = gsap.timeline();
     landingAnim
       .fromTo(
@@ -169,13 +189,53 @@ const Home = () => {
                   <div className="header-content">
                     <img className="hero-logo" src={Logo1} alt="" />
                     <div className="header-right">
-                      <a href="#">Driver Application</a>
-                      <a href="#">Merchant Application</a>
-                      <button>Sign Up</button>
-                      <button>Sign In</button>
+                      <a href="#">
+                        <BsTruck />
+                        Driver Application
+                      </a>
+                      <a href="#">
+                        <BsBoxSeam /> Merchant Application
+                      </a>
+                      <div
+                        onClick={() => {
+                          setIsHeaderMobShowing(true);
+                        }}
+                      >
+                        <MdMenu />
+                      </div>
+
+                      {/* <button>Sign Up</button>
+                      <button>Sign In</button> */}
                     </div>
                   </div>
                 </div>
+                {isHeaderMobShowing ? (
+                  <div className="header-mob">
+                    <div className="box">
+                      <div className="header-mob-content">
+                        <div className="header-mob-head">
+                          <img className="hero-logo" src={Logo1} alt="" />
+                          <div
+                            onClick={() => {
+                              setIsHeaderMobShowing(false);
+                            }}
+                          >
+                            <MdClose />
+                          </div>
+                        </div>
+                        <div className="header-mob-content">
+                          <a href="#">
+                            <BsTruck />
+                            Driver Application
+                          </a>
+                          <a href="#">
+                            <BsBoxSeam /> Merchant Application
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                ) : null}
               </header>
               <div className="box">
                 <div className="merchant-hero-grid">
@@ -363,7 +423,7 @@ const Home = () => {
                     </h3>
                   </div>
                   <div className="why-zuumdrop-grid">
-                    <div data-speed={1.25} className="why-zuumdrop-grid-card">
+                    <div className="why-zuumdrop-grid-card">
                       <h3 className="cursive-text">
                         More Customers, More Money💰
                       </h3>
@@ -373,7 +433,7 @@ const Home = () => {
                         Get More Customers Through Our In-App Marketing Program.
                       </p>
                     </div>
-                    <div data-speed={1.15} className="why-zuumdrop-grid-card">
+                    <div className="why-zuumdrop-grid-card">
                       <h3 className="cursive-text">You Cook We Deliver 📦</h3>
                       <p>
                         Finding Drivers These Days Can Be Difficult, No Need To
@@ -382,7 +442,7 @@ const Home = () => {
                         Efficient To Your Customers.
                       </p>
                     </div>
-                    <div data-speed={1.25} className="why-zuumdrop-grid-card">
+                    <div className="why-zuumdrop-grid-card">
                       <h3 className="cursive-text">
                         More Data And Insights = Success ⭐
                       </h3>

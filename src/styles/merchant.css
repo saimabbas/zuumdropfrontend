@@ -37,6 +37,7 @@
 }
 .merchant-hero-grid-left .appstores-container {
   position: relative;
+  bottom: 0;
 }
 .chat-icon.merchant-chat-icon {
   background: radial-gradient(
@@ -218,4 +219,114 @@
   color: #0076f9;
   font-weight: 600;
   margin: 0 0 3.5rem 0;
+}
+.merchant-hero-section::after {
+  display: none;
+}
+@media screen and (max-width: 1250px) {
+  .merchant-hero-grid {
+    padding: 0;
+    grid-gap: 5rem;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .merchant-hero-grid {
+    grid-template-columns: 1fr;
+  }
+  .merchant-hero-grid-right {
+    order: 2;
+    max-width: 650px;
+    margin: 0 auto;
+  }
+  .merchant-hero-grid-left {
+    order: 1;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .merchant-hero-grid-left > p {
+    margin: 3.5rem 0;
+  }
+  .merchant-hero-section {
+    background: unset;
+    position: relative;
+    padding: 15rem 0 7.5rem 0;
+  }
+  .merchant-hero-grid {
+    position: relative;
+    z-index: 100;
+  }
+  .merchant-hero-section::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 125vh;
+    position: absolute;
+    top: 0;
+    z-index: 50;
+    left: 0;
+    background: radial-gradient(
+      72.44% 124.62% at 46.84% 0%,
+      #0076f9 0%,
+      #0252c4 100%
+    );
+  }
+  .get-started-box {
+    box-shadow: 0 7px 10px rgba(0, 0, 0, 0.05);
+  }
+  .why-zuumdrop-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .steps-section-grid {
+    grid-template-columns: 1fr;
+    grid-gap: 5rem;
+  }
+  .why-zuumdrop-section,
+  .how-zuum-works-section,
+  .steps-section {
+    padding: 5rem 0;
+  }
+  .why-zuumdrop-grid {
+    grid-gap: 5rem;
+  }
+  .hzw-grid {
+    margin: 5rem auto;
+  }
+  .steps-section-grid-right {
+    order: 1;
+  }
+  .steps-section-grid-left {
+    order: 2;
+  }
+}
+@media screen and (max-width: 775px) {
+  .why-zuumdrop-grid {
+    grid-template-columns: 1fr;
+    grid-gap: 3.5rem;
+    margin: 5rem 0 0 0;
+  }
+  .gs-step-box p {
+    font-size: 1.65rem;
+  }
+  .gs-step-box span {
+    font-size: 2.5rem;
+  }
+  .steps-section-grid-left > h4 {
+    font-size: 3rem;
+    margin: 0 0 1.5rem 0;
+  }
+  .how-zuum-works-section .hzw-grid {
+    margin: 5rem 0 0 0;
+  }
+  .merchant-hero-grid-left h1 {
+    font-size: 3.25rem;
+  }
+  .hzwm-heading-box h3 {
+    font-size: 2.5rem;
+  }
+  .hzwm-heading-box p {
+    font-size: 1.65rem;
+  }
 }

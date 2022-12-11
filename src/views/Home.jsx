@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 
 // Styles
 import "../styles/globals.css";
@@ -56,6 +56,7 @@ import { SplitText } from "gsap/SplitText";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { ScrollSmoother } from "gsap/ScrollSmoother";
 import Marquee from "react-marquee-slider";
+import { MdClose, MdMenu } from "react-icons/md";
 import { IoLocationOutline, IoSearchOutline } from "react-icons/io5";
 import {
   BsArrowRight,
@@ -72,6 +73,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { EffectCoverflow, Pagination, Autoplay } from "swiper";
 
 const Home = () => {
+  const [isHeaderMobShowing, setIsHeaderMobShowing] = useState(false);
   gsap.registerPlugin(SplitText, ScrollSmoother, ScrollTrigger);
   const defaultOptions = {
     loop: true,
@@ -191,11 +193,46 @@ const Home = () => {
                       <a href="#">
                         <BsBoxSeam /> Merchant Application
                       </a>
+                      <div
+                        onClick={() => {
+                          setIsHeaderMobShowing(true);
+                        }}
+                      >
+                        <MdMenu />
+                      </div>
+
                       {/* <button>Sign Up</button>
                       <button>Sign In</button> */}
                     </div>
                   </div>
                 </div>
+                {isHeaderMobShowing ? (
+                  <div className="header-mob">
+                    <div className="box">
+                      <div className="header-mob-content">
+                        <div className="header-mob-head">
+                          <img className="hero-logo" src={Logo1} alt="" />
+                          <div
+                            onClick={() => {
+                              setIsHeaderMobShowing(false);
+                            }}
+                          >
+                            <MdClose />
+                          </div>
+                        </div>
+                        <div className="header-mob-content">
+                          <a href="#">
+                            <BsTruck />
+                            Driver Application
+                          </a>
+                          <a href="#">
+                            <BsBoxSeam /> Merchant Application
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                ) : null}
               </header>
               <div className="hero-bg-grd"></div>
               <img
