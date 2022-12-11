@@ -99,7 +99,14 @@ header {
   font-size: 1.5rem;
   color: var(--white);
   transition: 0.35s;
-  margin: 0 3rem 0 0;
+  margin: 0 0 0 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.header-right a svg {
+  font-size: 2rem;
+  margin: 0 0.75rem 0 0;
 }
 .header-right button:nth-child(3) {
   font-size: 1.5rem;
@@ -136,4 +143,14 @@ header {
 .header-right a:hover {
   transform: translate(0, -0.5rem);
   color: var(--white);
+}
+@media screen and (max-width: 1000px) {
+  .home-page .header-content {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .box {
+    padding: 0 2rem;
+  }
 }

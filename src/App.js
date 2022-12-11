@@ -1,4 +1,4 @@
-import Page from "./views/Merchant";
+import Page from "./views/Home";
 
 function App() {
   return (

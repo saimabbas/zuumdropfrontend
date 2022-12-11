@@ -23,11 +23,11 @@
   width: 100%;
 }
 .merchant-hero-grid-left h1 {
-  font-size: 5rem;
+  font-size: 4.25rem;
   color: var(--white);
 }
 .merchant-hero-grid-left > p {
-  font-size: 2rem;
+  font-size: 1.75rem;
   color: var(--white);
   margin: 1.5rem 0 10rem 0;
 }

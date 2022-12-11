@@ -63,6 +63,8 @@ import {
   BsInstagram,
   BsFacebook,
   BsTwitter,
+  BsTruck,
+  BsBoxSeam,
   BsLinkedin,
   BsChatLeftDotsFill,
 } from "react-icons/bs";
@@ -80,11 +82,27 @@ const Home = () => {
     },
   };
   useEffect(() => {
-    ScrollSmoother.create({
-      smooth: 1.15,
-      effects: true,
-      smoothTouch: 0,
-    });
+    function myFunction(x) {
+      if (x.matches) {
+        // If media query matches
+        ScrollSmoother.create({
+          smooth: 1.15,
+          effects: false,
+          smoothTouch: 0,
+        });
+      } else {
+        ScrollSmoother.create({
+          smooth: 1.15,
+          effects: true,
+          smoothTouch: 0,
+        });
+      }
+    }
+
+    var x = window.matchMedia("(max-width: 1000px)");
+    myFunction(x); // Call listener function at run time
+    x.addListener(myFunction); // Attach listener function on state changes
+
     let landingAnim = gsap.timeline();
     landingAnim
       .fromTo(
@@ -166,10 +184,15 @@ const Home = () => {
                   <div className="header-content">
                     <img className="hero-logo" src={Logo1} alt="" />
                     <div className="header-right">
-                      <a href="#">Driver Application</a>
-                      <a href="#">Merchant Application</a>
-                      <button>Sign Up</button>
-                      <button>Sign In</button>
+                      <a href="#">
+                        <BsTruck />
+                        Driver Application
+                      </a>
+                      <a href="#">
+                        <BsBoxSeam /> Merchant Application
+                      </a>
+                      {/* <button>Sign Up</button>
+                      <button>Sign In</button> */}
                     </div>
                   </div>
                 </div>
@@ -530,7 +553,8 @@ const Home = () => {
                   <div className="reviews-swiper-container">
                     <>
                       <Swiper
-                        slidesPerView={"3"}
+                        slidesPerView={"1"}
+                        spaceBetween={0}
                         className="mySwiper"
                         loop={true}
                         speed={1000}
@@ -541,6 +565,16 @@ const Home = () => {
                         autoplay={{
                           disableOnInteraction: true,
                           delay: 3000,
+                        }}
+                        breakpoints={{
+                          1000: {
+                            slidesPerView: 1.5,
+                            spaceBetween: 0,
+                          },
+                          775: {
+                            slidesPerView: 3,
+                            spaceBetween: 0,
+                          },
                         }}
                       >
                         <SwiperSlide>

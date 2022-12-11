@@ -592,3 +592,144 @@ footer {
 .footer-bottom-grid a:hover {
   text-decoration: underline;
 }
+@media screen and (max-width: 1000px) {
+  .hero-img {
+    height: 90%;
+    top: unset;
+    bottom: 0;
+    display: none;
+  }
+  .hero-bg-grd {
+    clip-path: none;
+  }
+  .hero-section-content {
+    align-items: center;
+    width: 100%;
+  }
+  .appstores-container {
+    position: relative;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .hero-section-content h1 {
+    font-size: 6.5rem;
+  }
+  .heading-swoosh {
+    max-height: 6rem;
+  }
+  .hero-section-content button {
+    margin: 6.5rem 0;
+  }
+  .hero-section .paperplane svg {
+    width: 40rem !important;
+    height: 40rem !important;
+    top: 9.5%;
+    left: 58%;
+  }
+  .zuum-services-grid {
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 5rem;
+  }
+  .hzw-grid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    grid-gap: 0;
+  }
+  .hzw-grid > * {
+    max-width: 450px;
+  }
+  .downarrow-box:nth-child(2) {
+    margin: 7.5rem 0;
+  }
+  .hzw-grid-card:nth-child(3) {
+    margin: 0;
+  }
+  .downarrow-box:nth-child(4) {
+    margin: 7.5rem 0;
+  }
+  .hzw-grid-card:nth-child(5) {
+    margin: 0;
+  }
+  .downarrow-box:nth-child(2) img,
+  .downarrow-box:nth-child(4) img {
+    transform: rotate(90deg);
+  }
+}
+@media screen and (max-width: 775px) {
+  .reviews-swiper-container .swiper-slide.swiper-slide-active {
+    transform: scale(1);
+  }
+  .zuum-services-grid {
+    grid-template-columns: 1fr;
+    grid-gap: 3.5rem;
+  }
+  .footer-top-grid {
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 5rem 1.5rem;
+  }
+  .footer-top-grid-left {
+    grid-column: 1/-1;
+  }
+  .hero-section-content h1 {
+    font-size: 5.5rem;
+  }
+  .hero-appstores-box svg {
+    margin: 0 1rem;
+  }
+  .hero-section-content button {
+    padding: 1rem 1.5rem;
+  }
+  .hero-section-content button i {
+    margin: 0 1rem;
+  }
+  .hero-logo {
+    max-height: 3.5rem;
+  }
+  .header-right a {
+    display: none;
+  }
+  .appstores-container {
+    position: absolute;
+    bottom: 5rem;
+  }
+  .hero-section .paperplane svg {
+    top: 3.5%;
+    left: 5%;
+  }
+  .section-heading h3 {
+    font-size: 2.25rem;
+  }
+  .section-heading h3 span {
+    font-size: 5rem;
+    line-height: 5rem;
+  }
+  .delivering-to-section,
+  .zuum-services-section,
+  .how-zuum-works-section,
+  .reviews-section {
+    padding: 5rem 0;
+  }
+  .delivering-grid-container {
+    margin: 5rem auto 0 auto;
+  }
+  .hzw-grid {
+    margin: 5rem auto 5rem auto;
+  }
+  .reviews-swiper-container {
+    margin: 1.5rem 0 0 0;
+  }
+  .footer-bottom-grid {
+    padding: 3.5rem 0 0 0;
+    margin: 3.5rem 0 0 0;
+  }
+  footer {
+    padding: 3.5rem 0;
+  }
+  .footer-top-grid-left > img {
+    max-height: 3.5rem;
+  }
+}
