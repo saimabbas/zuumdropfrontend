@@ -35,6 +35,9 @@
 .merchant-hero-grid-left .hero-appstores-box svg:hover {
   fill: #0076f9 !important;
 }
+.driver-page .merchant-hero-grid-left .hero-appstores-box svg:hover {
+  fill: #ff482a !important;
+}
 .merchant-hero-grid-left .appstores-container {
   position: relative;
   bottom: 0;
@@ -52,14 +55,38 @@
   border-radius: 1.5rem;
   background-color: var(--white);
   display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 1rem;
+}
+.gsb-comb-info > .form-floating {
+  margin: 0.9rem 0 0 0;
+}
+.gsb-comb-info {
+  margin: 0 0 1rem 0;
+}
+.gsb-comb-info h5 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--black);
+  margin: 0.5rem 0 0.5rem 0;
+}
+.gsb-2-boxes {
+  width: 100%;
+  display: grid;
   grid-template-columns: 1fr 1fr;
+  grid-gap: 1rem;
+}
+.gsb-3-boxes {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 1rem;
 }
 .get-started-box h6 {
   font-size: 3.5rem;
   color: var(--black);
   font-weight: 700;
-  margin: 0 0 3.5rem 0;
+  margin: 0 0 2.5rem 0;
 }
 .get-started-box {
   font-size: 16px;
@@ -85,16 +112,6 @@
 .merchant-page .form-floating > .form-control-plaintext {
   padding: 1rem;
 }
-.get-started-box h6:nth-child(1),
-.get-started-box *:nth-child(4),
-.get-started-box *:nth-child(5),
-.get-started-box *:nth-child(6),
-.get-started-box *:nth-child(7),
-.get-started-box *:nth-child(8),
-.get-started-box *:nth-child(9),
-.get-started-box *:nth-child(10) {
-  grid-column: 1/3;
-}
 .get-started-box button {
   background: linear-gradient(90deg, #a80000 0%, #ff4135 100%);
   font-size: 1.65rem;
@@ -112,6 +129,9 @@
 }
 .get-started-box .form-check {
   margin: 2.5rem 0;
+}
+.merchant-page.driver-page .get-started-box .form-check {
+  margin: 0;
 }
 .merchant-cc .input-group {
   flex-wrap: nowrap;
@@ -136,6 +156,17 @@
   max-width: 1150px;
   margin: 7.5rem auto 0 auto;
 }
+.qualifications-grid {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+  grid-gap: 5rem;
+  max-width: 1000px;
+  margin: 7.5rem auto 0 auto;
+}
+.qualifications-grid-card {
+}
 .why-zuumdrop-grid-card {
   width: 100%;
 }
@@ -144,6 +175,15 @@
   color: #171b26;
   font-weight: 700;
   margin: 0 0 2.5rem 0;
+}
+.why-zuumdrop-grid-card ul {
+  width: 100%;
+  padding: 0 0 0 2.5rem;
+}
+.why-zuumdrop-grid-card ul li {
+  font-size: 1.5rem;
+  color: #3d424d;
+  margin: 0 0 1rem 0;
 }
 .why-zuumdrop-grid-card p {
   font-size: 1.5rem;
@@ -222,6 +262,12 @@
 }
 .merchant-hero-section::after {
   display: none;
+}
+.merchant-page.driver-page .merchant-hero-section {
+  background: var(--grd) !important;
+}
+.merchant-page .merchant-hero-section.driver-page::after {
+  background: var(--grd) !important;
 }
 @media screen and (max-width: 1250px) {
   .merchant-hero-grid {

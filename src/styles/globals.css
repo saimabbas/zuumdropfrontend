@@ -60,6 +60,10 @@ body {
 .merchant-page .section-heading h3 i {
   color: #0076f9;
 }
+.driver-page.merchant-page .section-heading h3 span,
+.driver-page.merchant-page .section-heading h3 i {
+  color: #ff4135;
+}
 button {
   cursor: pointer;
 }
@@ -197,6 +201,9 @@ header {
   font-size: 2.5rem;
   color: var(--white);
 }
+.header-right > div {
+  display: none;
+}
 @media screen and (max-width: 1000px) {
   .home-page .header-content {
     width: 100%;
@@ -205,5 +212,8 @@ header {
 @media screen and (max-width: 775px) {
   .box {
     padding: 0 2.5rem;
+  }
+  .header-right > div {
+    display: block;
   }
 }

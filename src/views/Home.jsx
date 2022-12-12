@@ -212,11 +212,7 @@ const Home = () => {
                       <div className="header-mob-content">
                         <div className="header-mob-head">
                           <img className="hero-logo" src={Logo1} alt="" />
-                          <div
-                            onClick={() => {
-                              setIsHeaderMobShowing(false);
-                            }}
-                          >
+                          <div>
                             <MdClose />
                           </div>
                         </div>
@@ -605,11 +601,11 @@ const Home = () => {
                         }}
                         breakpoints={{
                           1000: {
-                            slidesPerView: 1.5,
+                            slidesPerView: 3,
                             spaceBetween: 0,
                           },
                           775: {
-                            slidesPerView: 3,
+                            slidesPerView: 1.5,
                             spaceBetween: 0,
                           },
                         }}

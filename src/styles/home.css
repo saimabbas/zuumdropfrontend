@@ -33,6 +33,7 @@
   color: var(--white);
   cursor: pointer;
   transition: 0.35s;
+  z-index: 10005;
 }
 .chat-icon:hover {
   transform: scale(1.1);
@@ -592,6 +593,131 @@ footer {
 .footer-bottom-grid a:hover {
   text-decoration: underline;
 }
+.driver-page .hzwm-heading-box h3,
+.driver-page .steps-section-grid-left > h4,
+.driver-page .gs-step-box span {
+  color: #ff4135;
+}
+.press-hero-section {
+  width: 100%;
+  background: var(--grd);
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-direction: column;
+  padding: 12.5rem 2.5rem 2.5rem 2.5rem;
+}
+.press-hero-section header .header-content {
+  width: 100%;
+}
+.press-hero-section h1 {
+  font-size: 5rem;
+  font-weight: 700;
+  color: var(--white);
+}
+.press-hero-section p {
+  font-size: 1.65rem;
+  font-weight: 400;
+  color: var(--white);
+  text-align: center;
+  margin: 1rem 0 0 0;
+}
+.press-hero-section p a {
+  font-weight: 700;
+  color: var(--white);
+}
+.press-grid-section {
+  width: 100%;
+  padding: 7.5rem 0;
+}
+.press-grid {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+  grid-gap: 5rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+.press-grid-card {
+  width: 100%;
+  background-color: var(--white);
+  border-radius: 2rem;
+  transition: 0.35s box-shadow;
+  overflow: hidden;
+}
+.press-grid-card:hover {
+  box-shadow: 0 0 50px rgba(0, 0, 0, 0.15);
+}
+.press-grid-card > img {
+  width: 100%;
+  max-height: 25rem;
+  object-fit: cover;
+}
+.press-grid-card-content {
+  width: 100%;
+  padding: 2rem 2rem;
+}
+.pgcc-top {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.pgcc-top img {
+  min-width: 4rem;
+  max-height: 3rem;
+  width: min-content;
+  object-fit: contain;
+}
+.pgcc-top span {
+  font-size: 1.35rem;
+  color: var(--black);
+  text-transform: uppercase;
+  font-weight: 500;
+}
+.press-grid-card h3 {
+  color: var(--black);
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin: 2.5rem 0;
+}
+.press-grid-card p {
+  color: #3d424d;
+  font-size: 1.65rem;
+  font-weight: 400;
+}
+.press-grid-card a {
+  font-size: 1.5rem;
+  color: #ff4135;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: max-content;
+  margin: 2.5rem 0 0 0;
+}
+.press-grid-card a svg {
+  font-size: 1.75rem;
+  margin: 0 0 0 0.5rem;
+  transition: 0.5s;
+}
+.press-grid-card a:hover svg {
+  transform: translate(0.5rem, 0);
+}
+.press-grid-card a:hover {
+  color: #ff4135;
+}
+.pp-section {
+  width: 100%;
+  padding: 7.5rem 0;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+.pp-box p {
+  color: var(--black);
+  font-size: 1.6rem;
+}
 @media screen and (max-width: 1000px) {
   .hero-img {
     height: 90%;
@@ -660,6 +786,12 @@ footer {
   }
 }
 @media screen and (max-width: 775px) {
+  .press-hero-section h1 {
+    font-size: 3rem;
+  }
+  .press-grid {
+    grid-template-columns: 1fr;
+  }
   .reviews-swiper-container .swiper-slide.swiper-slide-active {
     transform: scale(1);
   }
@@ -707,8 +839,12 @@ footer {
   .delivering-to-section,
   .zuum-services-section,
   .how-zuum-works-section,
+  .press-grid-section,
   .reviews-section {
     padding: 5rem 0;
+  }
+  .press-grid-card {
+    border-radius: 1.25rem;
   }
   .delivering-grid-container {
     margin: 5rem auto 0 auto;
@@ -737,5 +873,8 @@ footer {
   }
   .hzw-grid-card span {
     left: 0;
+  }
+  .press-grid-card {
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.15);
   }
 }

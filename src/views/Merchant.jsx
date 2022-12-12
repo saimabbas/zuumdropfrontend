@@ -93,7 +93,6 @@ const Home = () => {
   useEffect(() => {
     function myFunction(x) {
       if (x.matches) {
-        // If media query matches
         ScrollSmoother.create({
           smooth: 1.15,
           effects: false,
@@ -114,68 +113,105 @@ const Home = () => {
     let landingAnim = gsap.timeline();
     landingAnim
       .fromTo(
-        ".hero-bg-grd",
+        ".get-started-box",
         {
-          width: 0,
+          y: "15rem",
+          opacity: 0,
         },
         {
-          width: "100%",
-          duration: 1.25,
+          y: 0,
+          opacity: 1,
           ease: Power4.easeInOut,
+          duration: 1.5,
         }
       )
       .fromTo(
-        ".hero-img",
+        ".merchant-hero-grid-left h1",
         {
-          x: "10rem",
+          y: "7.5rem",
           opacity: 0,
         },
         {
-          x: 0,
+          y: 0,
           opacity: 1,
-          duration: 1,
-        },
-        "<0"
-      )
-      .fromTo(
-        ".hero-heading-box",
-        {
-          y: "5rem",
-          opacity: 0,
-        },
-        {
-          y: "0",
-          opacity: 1,
-          duration: 1.5,
           ease: Power4.easeInOut,
+          duration: 1,
         },
         "<0.25"
       )
       .fromTo(
-        ".hero-section-content button",
+        ".merchant-hero-grid-left > p",
         {
-          y: "5rem",
+          y: "7.5rem",
           opacity: 0,
         },
         {
-          y: "0",
+          y: 0,
           opacity: 1,
-          duration: 1.5,
           ease: Power4.easeInOut,
-        },
-        "<0.1"
-      )
-      .fromTo(
-        ".paperplane",
-        {
-          opacity: 0,
-        },
-        {
-          opacity: 1,
           duration: 1,
         },
-        "<0.75"
+        "<0.05"
+      )
+      .fromTo(
+        ".merchant-hero-grid-left .appstores-container",
+        {
+          y: "7.5rem",
+          opacity: 0,
+        },
+        {
+          y: 0,
+          opacity: 1,
+          ease: Power4.easeInOut,
+          duration: 1,
+        },
+        "<0.05"
       );
+
+    let whyCardSAnim = gsap.timeline({
+      scrollTrigger: {
+        trigger: ".why-zuumdrop-section",
+        start: "top 50%",
+      },
+    });
+    whyCardSAnim.fromTo(
+      ".why-zuumdrop-grid-card",
+      {
+        opacity: 0,
+        y: "10rem",
+      },
+      {
+        y: 0,
+        opacity: 1,
+        duration: 1,
+        stagger: {
+          each: 0.2,
+        },
+      }
+    );
+    let stepsCardsAnim = gsap.timeline({
+      scrollTrigger: {
+        trigger: ".steps-section",
+        start: "top 50%",
+      },
+    });
+    stepsCardsAnim.fromTo(
+      ".gs-step-box",
+      {
+        opacity: 0,
+        rotateX: "90deg",
+        y: "5rem",
+      },
+      {
+        rotateX: "0",
+        y: 0,
+        opacity: 1,
+        duration: 1,
+        stagger: {
+          each: 0.1,
+        },
+      }
+    );
   }, []);
 
   return (
@@ -242,18 +278,20 @@ const Home = () => {
                   <div className="merchant-hero-grid-right">
                     <div className="get-started-box">
                       <h6 className="cursive-text">Let's Get Started</h6>
-                      <FloatingLabel
-                        controlId="floatingInput"
-                        label="First Name"
-                      >
-                        <Form.Control type="text" placeholder="First Name" />
-                      </FloatingLabel>
-                      <FloatingLabel
-                        controlId="floatingInput"
-                        label="Last Name"
-                      >
-                        <Form.Control type="text" placeholder="Last Name" />
-                      </FloatingLabel>
+                      <div className="gsb-2-boxes">
+                        <FloatingLabel
+                          controlId="floatingInput"
+                          label="First Name"
+                        >
+                          <Form.Control type="text" placeholder="First Name" />
+                        </FloatingLabel>
+                        <FloatingLabel
+                          controlId="floatingInput"
+                          label="Last Name"
+                        >
+                          <Form.Control type="text" placeholder="Last Name" />
+                        </FloatingLabel>
+                      </div>
                       <div className="merchant-cc">
                         <InputGroup>
                           <Form.Select aria-label="Business Type">
