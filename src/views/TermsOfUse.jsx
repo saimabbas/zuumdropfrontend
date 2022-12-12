@@ -135,13 +135,15 @@ const Home = () => {
               <header>
                 <div className="box">
                   <div className="header-content">
-                    <img className="hero-logo" src={Logo1} alt="" />
+                    <a href="/">
+                      <img className="hero-logo" src={Logo1} alt="" />
+                    </a>
                     <div className="header-right">
-                      <a href="#">
+                      <a href="/driver">
                         <BsTruck />
                         Driver Application
                       </a>
-                      <a href="#">
+                      <a href="/merchant">
                         <BsBoxSeam /> Merchant Application
                       </a>
                       <div
@@ -162,17 +164,19 @@ const Home = () => {
                     <div className="box">
                       <div className="header-mob-content">
                         <div className="header-mob-head">
-                          <img className="hero-logo" src={Logo1} alt="" />
+                          <a href="/">
+                            <img className="hero-logo" src={Logo1} alt="" />
+                          </a>
                           <div>
                             <MdClose />
                           </div>
                         </div>
                         <div className="header-mob-content">
-                          <a href="#">
+                          <a href="/driver">
                             <BsTruck />
                             Driver Application
                           </a>
-                          <a href="#">
+                          <a href="/merchant">
                             <BsBoxSeam /> Merchant Application
                           </a>
                         </div>
@@ -217,7 +221,9 @@ const Home = () => {
               <div className="box">
                 <div className="footer-top-grid">
                   <div className="footer-top-grid-left">
-                    <img src={Logo2} alt="Logo2" />
+                    <a href="/">
+                      <img src={Logo2} alt="Logo2" />
+                    </a>
                     <div className="appstores-box">
                       <a href="#">
                         <img src={AppstoreImg} alt="AppstoreImg" />
@@ -228,11 +234,11 @@ const Home = () => {
                     </div>
                   </div>
                   <div className="footer-top-grid-right">
-                    <a href="#">Home</a>
+                    <a href="/">Home</a>
                     <a href="#">Delivery Areas</a>
-                    <a href="#">Press</a>
-                    <a href="#">Terms of Use</a>
-                    <a href="#">Privacy Policy</a>
+                    <a href="/press">Press</a>
+                    <a href="/termsofuse">Terms of Use</a>
+                    <a href="/privacypolicy">Privacy Policy</a>
                   </div>
                   <div className="footer-top-grid-right">
                     <a href="#">
