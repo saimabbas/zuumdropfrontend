@@ -522,7 +522,7 @@ footer {
 .footer-top-grid-left {
   width: 100%;
 }
-.footer-top-grid-left > img {
+.footer-top-grid-left img {
   max-height: 4rem;
   object-fit: contain;
 }
@@ -862,7 +862,7 @@ footer {
   footer {
     padding: 3.5rem 0;
   }
-  .footer-top-grid-left > img {
+  .footer-top-grid-left img {
     max-height: 3.5rem;
   }
   .gs-step-box {
