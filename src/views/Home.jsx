@@ -450,7 +450,7 @@ const Home = () => {
                           Customers By Partnering With Us
                         </p>
                       </div>
-                      <button>Store Signup</button>
+                      <a href="/merchant">Store Signup</a>
                     </div>
                   </div>
                   <div data-speed={1.2} className="zuum-services-grid-card">
@@ -464,7 +464,7 @@ const Home = () => {
                           Anytime, Earn Anytime, So you can have more Free Time.
                         </p>
                       </div>
-                      <button>Earn Cash</button>
+                      <a href="/driver">Earn Cash</a>
                     </div>
                   </div>
                   <div data-speed={1.3} className="zuum-services-grid-card">
@@ -478,7 +478,7 @@ const Home = () => {
                           You Want to be Delivered ASAP
                         </p>
                       </div>
-                      <button>Get App</button>
+                      <a href="">Get App</a>
                     </div>
                   </div>
                 </div>
