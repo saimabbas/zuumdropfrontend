@@ -10,7 +10,7 @@ import "swiper/css/pagination";
 // Images
 import HeroImg1 from "../assets/img/hero-img-1.png";
 import Logo1 from "../assets/img/logo-1.png";
-import Logo2 from "../assets/img/logo-2.png";
+import Logo2 from "../assets/img/logo-2.jpeg";
 import WhiteSwoosh from "../assets/img/black-swoosh.png";
 import ETImg1 from "../assets/img/et-1.png";
 import ETImg2 from "../assets/img/et-2.png";
@@ -68,6 +68,7 @@ import {
   BsBoxSeam,
   BsLinkedin,
   BsChatLeftDotsFill,
+  BsCart3,
 } from "react-icons/bs";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { EffectCoverflow, Pagination, Autoplay } from "swiper";
@@ -188,12 +189,15 @@ const Home = () => {
                       <img className="hero-logo" src={Logo1} alt="" />
                     </a>
                     <div className="header-right">
+                      <a href="/merchant">
+                        <BsBoxSeam /> Merchant Application
+                      </a>
                       <a href="/driver">
                         <BsTruck />
                         Driver Application
                       </a>
-                      <a href="/merchant">
-                        <BsBoxSeam /> Merchant Application
+                      <a href="#">
+                        <BsCart3 /> ZuumDrop Merch
                       </a>
                       <div
                         onClick={() => {
@@ -216,17 +220,24 @@ const Home = () => {
                           <a href="/">
                             <img className="hero-logo" src={Logo1} alt="" />
                           </a>
-                          <div>
+                          <div
+                            onClick={() => {
+                              setIsHeaderMobShowing(false);
+                            }}
+                          >
                             <MdClose />
                           </div>
                         </div>
                         <div className="header-mob-content">
+                          <a href="/merchant">
+                            <BsBoxSeam /> Merchant Application
+                          </a>
                           <a href="/driver">
                             <BsTruck />
                             Driver Application
                           </a>
-                          <a href="/merchant">
-                            <BsBoxSeam /> Merchant Application
+                          <a href="#">
+                            <BsCart3 /> ZuumDrop Merch
                           </a>
                         </div>
                       </div>
@@ -531,7 +542,7 @@ const Home = () => {
                 velocity={20}
                 minScale={0.7}
                 resetAfterTries={200}
-                direction="ltr"
+                direction="rtl"
               >
                 <div className="delivering-grid-card">
                   <img src={ETImg1} alt="ETImg2" />
@@ -764,14 +775,14 @@ const Home = () => {
                     <a href="/privacypolicy">Privacy Policy</a>
                   </div>
                   <div className="footer-top-grid-right">
-                    <a href="#">
+                    <a href="https://www.instagram.com/zuumdrop/">
                       {" "}
                       <BsInstagram /> Instagram
                     </a>
-                    <a href="#">
+                    <a href="https://www.facebook.com/profile.php?id=100084929088753">
                       <BsFacebook /> Facebook
                     </a>
-                    <a href="#">
+                    <a href="https://twitter.com/zuumdrop">
                       <BsTwitter /> Twitter
                     </a>
                     <a href="#">

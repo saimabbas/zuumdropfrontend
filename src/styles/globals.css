@@ -184,7 +184,7 @@ header {
   flex-direction: column;
   align-items: flex-start;
 }
-.header-mob-content a {
+.header-mob-content > a {
   font-size: 1.75rem;
   color: var(--white);
   transition: 0.35s;
@@ -193,7 +193,10 @@ header {
   align-items: center;
   justify-content: center;
 }
-.header-mob-content a svg {
+.header-mob-content > a:hover {
+  color: var(--white);
+}
+.header-mob-content > a svg {
   font-size: 2.25rem;
   margin: 0 1rem 0 0;
 }

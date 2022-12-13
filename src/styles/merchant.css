@@ -284,6 +284,7 @@
     order: 2;
     max-width: 650px;
     margin: 0 auto;
+    width: 100%;
   }
   .merchant-hero-grid-left {
     order: 1;
@@ -303,6 +304,9 @@
   .merchant-hero-grid {
     position: relative;
     z-index: 100;
+  }
+  .merchant-page.driver-page .merchant-hero-section::after {
+    background: var(--grd) !important;
   }
   .merchant-hero-section::after {
     content: "";
@@ -348,6 +352,17 @@
   }
 }
 @media screen and (max-width: 775px) {
+  .gsb-2-boxes,
+  .gsb-3-boxes {
+    grid-template-columns: 1fr;
+  }
+  .get-started-box {
+    padding: 2.5rem;
+  }
+  .get-started-box h6 {
+    font-size: 3rem;
+    margin: 0 0 0.5rem 0;
+  }
   .why-zuumdrop-grid {
     grid-template-columns: 1fr;
     grid-gap: 3.5rem;
@@ -362,9 +377,6 @@
   .steps-section-grid-left > h4 {
     font-size: 3rem;
     margin: 0 0 1.5rem 0;
-  }
-  .how-zuum-works-section .hzw-grid {
-    margin: 5rem 0 0 0;
   }
   .merchant-hero-grid-left h1 {
     font-size: 3.25rem;
