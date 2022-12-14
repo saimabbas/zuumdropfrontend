@@ -201,8 +201,7 @@ const Home = () => {
                 For the latest news, please contact{" "}
                 <a href="#">contact@zuumdrop.com</a>
                 <br />
-                Please note, we will only reply to members of the press. For all
-                other inquiries, visit our contact page.
+                Please note, we will only reply to members of the press.
               </p>
             </section>
             {/*  <section className="press-grid-section">
