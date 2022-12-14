@@ -38,7 +38,7 @@ import AppstoreImg from "../assets/img/appstore.png";
 import GoogleplayImg from "../assets/img/googleplay.png";
 import GroceriesImg from "../assets/img/groceries.png";
 import DownArrowImg from "../assets/img/down-arrow.png";
-import FDBImg from "../assets/img/food-delivery-boy-3.jpg";
+import FDBImg from "../assets/img/db2.jpeg";
 import SSImg1 from "../assets/img/ss-img-1.png";
 import MHeroImg from "../assets/img/m-hero.jpeg";
 import SSImg2 from "../assets/img/ss-img-2.png";
@@ -414,11 +414,11 @@ const Home = () => {
                             </FloatingLabel>
                             <FloatingLabel
                               controlId="floatingInput"
-                              label="Security No."
+                              label="Social Security No."
                             >
                               <Form.Control
                                 type="text"
-                                placeholder="Security No."
+                                placeholder="Social Security No."
                               />
                             </FloatingLabel>
                             <FloatingLabel
@@ -745,20 +745,19 @@ const Home = () => {
                     </h4>
                     <div className="gs-step-box">
                       <p>
-                        <span className="cursive-text">01. </span> Tell us about
-                        your restaurant.
+                        <span className="cursive-text">01. </span> Signup
                       </p>
                     </div>
                     <div className="gs-step-box">
                       <p>
-                        <span className="cursive-text">02. </span> Upload your
-                        menu.
+                        <span className="cursive-text">02. </span> Upload
+                        Documents
                       </p>
                     </div>
                     <div className="gs-step-box">
                       <p>
-                        <span className="cursive-text">03. </span> Access
-                        Restaurant Dashboard and go live!
+                        <span className="cursive-text">03. </span> You're
+                        Officially A Dropper
                       </p>
                     </div>
                   </div>

@@ -27,7 +27,7 @@ import ETImg11 from "../assets/img/et-11.png";
 import ETImg12 from "../assets/img/et-12.png";
 import ETImg13 from "../assets/img/et-13.png";
 import ETImg14 from "../assets/img/et-14.png";
-import MHeroImg from "../assets/img/m-hero.jpeg";
+import MHeroImg from "../assets/img/m-hero-2.png";
 import HZWImg1 from "../assets/img/hzw-img-1.png";
 import HZWImg2 from "../assets/img/hzw-img-2.png";
 import HZWImg3 from "../assets/img/hzw-img-3.png";
@@ -39,7 +39,7 @@ import AppstoreImg from "../assets/img/appstore.png";
 import GoogleplayImg from "../assets/img/googleplay.png";
 import GroceriesImg from "../assets/img/groceries.png";
 import DownArrowImg from "../assets/img/down-arrow.png";
-import FDBImg from "../assets/img/food-delivery-boy-3.jpg";
+import FDBImg from "../assets/img/db3.jpeg";
 import Lottie from "react-lottie";
 import PaperplaneJson from "../assets/paperplane.json";
 
@@ -531,11 +531,6 @@ const Home = () => {
                     <h3 className="cursive-text">
                       How ZuumDrop Resturant & Business Partnership Works
                     </h3>
-                    <p>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                      sed do eiusmod tempor incididunt ut labore et dolore magna
-                      aliqua. Ut enim ad minim veniam
-                    </p>
                   </div>
                   <div className="hzw-grid">
                     <div data-speed={1.3} className="hzw-grid-card">
@@ -543,8 +538,8 @@ const Home = () => {
                       <img src={HZWImg1} alt="" />
                       <h4 className="cursive-text">Customer Places order</h4>
                       <p>
-                        A Customer Browses ZuumDrop App, Find Your Resturant Or
-                        Business Places An Order Through ZuumDrop App.
+                        Customer places order on the ZuumDrop app whether it’s
+                        restaurant delivery or grocery delivery.
                       </p>
                     </div>
                     <div data-speed={1.3} className="downarrow-box">
