@@ -500,8 +500,8 @@ const Home = () => {
                       <img src={HZWImg1} alt="" />
                       <h4 className="cursive-text">Customer Places order</h4>
                       <p>
-                        A Customer Browses ZuumDrop App, Find Your Resturant Or
-                        Business Places An Order Through ZuumDrop App.
+                        Customer places order on the ZuumDrop app whether it’s
+                        restaurant delivery or grocery delivery.
                       </p>
                     </div>
                     <div data-speed={1.3} className="downarrow-box">
@@ -512,7 +512,9 @@ const Home = () => {
                       <img src={HZWImg2} alt="" />
                       <h4 className="cursive-text">Merchant Prepares Order </h4>
                       <p>
-                        The Merchant Accepts The Order And Prepares The Order.
+                        The Restaurant Accepts The Order And Prepares The Order.
+                        For Grocery Delivery ZuumDrop Prepares The Order From
+                        Its Micro Store.
                       </p>
                     </div>
                     <div data-speed={1.2} className="downarrow-box">
@@ -629,12 +631,11 @@ const Home = () => {
                           <div className="reviews-card">
                             <img src={ReviewsImg} alt="ReviewsImg" />
                             <p>
-                              111 “Impressed with the overall experience. Placed
-                              an order on ZuumDrop right after booking a cab.
-                              The order arrived faster than the cab!!”
+                              There Grocery Delivery Service was fast and
+                              reliable. This is my new go to Delivery Platform!
                             </p>
                             <h6>
-                              <span></span> Esther Howard
+                              <span></span> Ashley Reynolds
                             </h6>
                             <div className="star-box">
                               <BsFillStarFill />
@@ -649,12 +650,12 @@ const Home = () => {
                           <div className="reviews-card">
                             <img src={ReviewsImg} alt="ReviewsImg" />
                             <p>
-                              222 “Impressed with the overall experience. Placed
-                              an order on ZuumDrop right after booking a cab.
-                              The order arrived faster than the cab!!”
+                              Resturant Delivery was impeccable. Food was hot
+                              and delivered on time. I definitely will be
+                              reordering from ZuumDrop again and again.
                             </p>
                             <h6>
-                              <span></span> Esther Howard
+                              <span></span> Mike Bashard
                             </h6>
                             <div className="star-box">
                               <BsFillStarFill />
@@ -669,72 +670,13 @@ const Home = () => {
                           <div className="reviews-card">
                             <img src={ReviewsImg} alt="ReviewsImg" />
                             <p>
-                              333 “Impressed with the overall experience. Placed
-                              an order on ZuumDrop right after booking a cab.
-                              The order arrived faster than the cab!!”
+                              I no longer have to drive 20min to the grocery
+                              store and sit in traffic when I can just get my
+                              groceries or snacks in 15min or less with
+                              ZuumDrop.
                             </p>
                             <h6>
-                              <span></span> Esther Howard
-                            </h6>
-                            <div className="star-box">
-                              <BsFillStarFill />
-                              <BsFillStarFill />
-                              <BsFillStarFill />
-                              <BsFillStarFill />
-                              <BsFillStarFill />
-                            </div>
-                          </div>
-                        </SwiperSlide>
-                        <SwiperSlide>
-                          <div className="reviews-card">
-                            <img src={ReviewsImg} alt="ReviewsImg" />
-                            <p>
-                              111 “Impressed with the overall experience. Placed
-                              an order on ZuumDrop right after booking a cab.
-                              The order arrived faster than the cab!!”
-                            </p>
-                            <h6>
-                              <span></span> Esther Howard
-                            </h6>
-                            <div className="star-box">
-                              <BsFillStarFill />
-                              <BsFillStarFill />
-                              <BsFillStarFill />
-                              <BsFillStarFill />
-                              <BsFillStarFill />
-                            </div>
-                          </div>
-                        </SwiperSlide>
-                        <SwiperSlide>
-                          <div className="reviews-card">
-                            <img src={ReviewsImg} alt="ReviewsImg" />
-                            <p>
-                              222 “Impressed with the overall experience. Placed
-                              an order on ZuumDrop right after booking a cab.
-                              The order arrived faster than the cab!!”
-                            </p>
-                            <h6>
-                              <span></span> Esther Howard
-                            </h6>
-                            <div className="star-box">
-                              <BsFillStarFill />
-                              <BsFillStarFill />
-                              <BsFillStarFill />
-                              <BsFillStarFill />
-                              <BsFillStarFill />
-                            </div>
-                          </div>
-                        </SwiperSlide>
-                        <SwiperSlide>
-                          <div className="reviews-card">
-                            <img src={ReviewsImg} alt="ReviewsImg" />
-                            <p>
-                              333 “Impressed with the overall experience. Placed
-                              an order on ZuumDrop right after booking a cab.
-                              The order arrived faster than the cab!!”
-                            </p>
-                            <h6>
-                              <span></span> Esther Howard
+                              <span></span> Britney Garcia
                             </h6>
                             <div className="star-box">
                               <BsFillStarFill />
@@ -791,7 +733,7 @@ const Home = () => {
                   </div>
                 </div>
                 <div className="footer-bottom-grid">
-                  <p>©2022 All Rights Reserved. ZuumDrop</p>
+                  <p>All Rights Reserved. © 2023 ZuumDrop</p>
                   <div></div>
                 </div>
               </div>

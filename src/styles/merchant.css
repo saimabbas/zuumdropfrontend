@@ -22,6 +22,13 @@
 .merchant-hero-grid-left {
   width: 100%;
 }
+.merchant-hero-grid-left > img {
+  width: 100%;
+  object-fit: cover;
+  max-height: 20rem;
+  margin: 3.5rem 0 0 0;
+  display: none;
+}
 .merchant-hero-grid-left h1 {
   font-size: 4.25rem;
   color: var(--white);
@@ -65,10 +72,10 @@
   margin: 0 0 1rem 0;
 }
 .gsb-comb-info h5 {
-  font-size: 1.5rem;
+  font-size: 1.65rem;
   font-weight: 600;
   color: var(--black);
-  margin: 0.5rem 0 0.5rem 0;
+  margin: 0 0 1rem 0;
 }
 .gsb-2-boxes {
   width: 100%;
@@ -112,20 +119,62 @@
 .merchant-page .form-floating > .form-control-plaintext {
   padding: 1rem;
 }
-.get-started-box button {
+.driver-btn-box {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+  grid-gap: 1rem;
+}
+.get-started-box > button,
+.driver-btn-box button:nth-child(2) {
   background: linear-gradient(90deg, #a80000 0%, #ff4135 100%);
   font-size: 1.65rem;
   padding: 1.25rem 2rem;
   border-radius: 0.75rem;
-  border: 0;
-  outline: 0;
   color: var(--white);
+  position: relative;
+  border: 1px solid #a80000;
+  z-index: 10;
+  margin: 2.5rem 0 0 0;
+  transition: 0.35s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.get-started-box button:hover {
+  box-shadow: 0 5px 7px rgba(0, 0, 0, 0.1);
+}
+.driver-btn-box button:nth-child(1) {
+  background: #fff;
+  margin: 2.5rem 0 0 0;
+  border: 1px solid #a80000;
+  font-size: 1.65rem;
+  padding: 1.25rem 2rem;
+  border-radius: 0.75rem;
+  color: #a80000;
   position: relative;
   z-index: 10;
   transition: 0.35s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-.get-started-box button:hover {
-  box-shadow: 0 5px 7px rgba(0, 0, 0, 0.05);
+.driver-btn-box button:nth-child(2) svg,
+.get-started-box > button svg {
+  margin: 0 0 0 1rem;
+  transition: 0.35s transform;
+}
+.driver-btn-box button:nth-child(1) svg {
+  margin: 0 1rem 0 0;
+  transition: 0.35s transform;
+}
+.driver-btn-box button:nth-child(2):hover svg,
+.get-started-box > button:hover svg {
+  transform: translate(0.75rem, 0);
+}
+.driver-btn-box button:nth-child(1):hover svg {
+  transform: translate(-0.75rem, 0);
 }
 .get-started-box .form-check {
   margin: 2.5rem 0;
@@ -379,12 +428,15 @@
     margin: 0 0 1.5rem 0;
   }
   .merchant-hero-grid-left h1 {
-    font-size: 3.25rem;
+    font-size: 3rem;
   }
   .hzwm-heading-box h3 {
     font-size: 2.5rem;
   }
   .hzwm-heading-box p {
     font-size: 1.65rem;
+  }
+  .merchant-hero-grid-left > img {
+    display: block;
   }
 }

@@ -39,6 +39,10 @@ import GoogleplayImg from "../assets/img/googleplay.png";
 import GroceriesImg from "../assets/img/groceries.png";
 import DownArrowImg from "../assets/img/down-arrow.png";
 import FDBImg from "../assets/img/food-delivery-boy-3.jpg";
+import SSImg1 from "../assets/img/ss-img-1.png";
+import MHeroImg from "../assets/img/m-hero.jpeg";
+import SSImg2 from "../assets/img/ss-img-2.png";
+import SSImg3 from "../assets/img/ss-img-3.png";
 import Lottie from "react-lottie";
 import PaperplaneJson from "../assets/paperplane.json";
 
@@ -57,7 +61,7 @@ import {
 import { SplitText } from "gsap/SplitText";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { ScrollSmoother } from "gsap/ScrollSmoother";
-import { MdClose, MdMenu } from "react-icons/md";
+import { MdClose, MdEast, MdMenu, MdWest } from "react-icons/md";
 import Marquee from "react-marquee-slider";
 import { IoLocationOutline, IoSearchOutline } from "react-icons/io5";
 import {
@@ -81,6 +85,10 @@ import InputGroup from "react-bootstrap/InputGroup";
 
 const Home = () => {
   const [isHeaderMobShowing, setIsHeaderMobShowing] = useState(false);
+  const [isFirstDataShowing, setIsFirstDataShowing] = useState(true);
+  const [isSecondDataShowing, setIsSecondDataShowing] = useState(false);
+  const [isThirdDataShowing, setIsThirdDataShowing] = useState(false);
+  const [isFourthDataShowing, setIsFourthDataShowing] = useState(false);
 
   gsap.registerPlugin(SplitText, ScrollSmoother, ScrollTrigger);
   const defaultOptions = {
@@ -139,6 +147,20 @@ const Home = () => {
           duration: 1,
         },
         "<0.25"
+      )
+      .fromTo(
+        ".merchant-hero-grid-left > img",
+        {
+          y: "7.5rem",
+          opacity: 0,
+        },
+        {
+          y: 0,
+          opacity: 1,
+          ease: Power4.easeInOut,
+          duration: 1,
+        },
+        "<0.05"
       )
       .fromTo(
         ".merchant-hero-grid-left > p",
@@ -289,129 +311,225 @@ const Home = () => {
                   <div className="merchant-hero-grid-right">
                     <div className="get-started-box">
                       <h6 className="cursive-text">Let's Get Started</h6>
-                      <div className="gsb-2-boxes">
-                        <FloatingLabel
-                          controlId="floatingInput"
-                          label="First Name"
-                        >
-                          <Form.Control type="text" placeholder="First Name" />
-                        </FloatingLabel>
-                        <FloatingLabel
-                          controlId="floatingInput"
-                          label="Last Name"
-                        >
-                          <Form.Control type="text" placeholder="Last Name" />
-                        </FloatingLabel>
-                      </div>
-                      <div className="gsb-comb-info">
-                        <h5>Residence Info</h5>
-                        <div className="gsb-3-boxes">
-                          <FloatingLabel controlId="floatingInput" label="City">
-                            <Form.Control type="text" placeholder="City" />
-                          </FloatingLabel>
+                      {isFirstDataShowing ? (
+                        <>
+                          <div className="gsb-2-boxes">
+                            <FloatingLabel
+                              controlId="floatingInput"
+                              label="First Name"
+                            >
+                              <Form.Control
+                                type="text"
+                                placeholder="First Name"
+                              />
+                            </FloatingLabel>
+                            <FloatingLabel
+                              controlId="floatingInput"
+                              label="Last Name"
+                            >
+                              <Form.Control
+                                type="text"
+                                placeholder="Last Name"
+                              />
+                            </FloatingLabel>
+                          </div>
+                          <div className="gsb-2-boxes">
+                            <FloatingLabel
+                              controlId="floatingInput"
+                              label="City"
+                            >
+                              <Form.Control type="text" placeholder="City" />
+                            </FloatingLabel>
+                            <FloatingLabel
+                              controlId="floatingInput"
+                              label="Zipcode"
+                            >
+                              <Form.Control type="text" placeholder="Zipcode" />
+                            </FloatingLabel>
+                          </div>
                           <FloatingLabel
                             controlId="floatingInput"
                             label="State"
                           >
                             <Form.Control type="text" placeholder="State" />
                           </FloatingLabel>
-                          <FloatingLabel
-                            controlId="floatingInput"
-                            label="Zipcode"
-                          >
-                            <Form.Control type="text" placeholder="Zipcode" />
-                          </FloatingLabel>
+                        </>
+                      ) : null}
+
+                      {isSecondDataShowing ? (
+                        <>
+                          <div className="gsb-comb-info">
+                            <h5>Vehicle Info</h5>
+                            <FloatingLabel
+                              controlId="floatingInput"
+                              label="Make"
+                            >
+                              <Form.Control type="text" placeholder="Make" />
+                            </FloatingLabel>
+                            <FloatingLabel
+                              controlId="floatingInput"
+                              label="Model"
+                            >
+                              <Form.Control type="text" placeholder="Model" />
+                            </FloatingLabel>
+                            <FloatingLabel
+                              controlId="floatingInput"
+                              label="Color"
+                            >
+                              <Form.Control type="text" placeholder="Color" />
+                            </FloatingLabel>
+                          </div>
+
+                          <Form.Check
+                            inline
+                            label="Do you have Insurance?"
+                            name="group1"
+                            type={"checkbox"}
+                            id={222}
+                          />
+                        </>
+                      ) : null}
+
+                      {isThirdDataShowing ? (
+                        <div className="gsb-comb-info">
+                          <h5>Driver License Info</h5>
+                          <div className="gsb-2-boxes">
+                            <FloatingLabel
+                              controlId="floatingInput"
+                              label="License State"
+                            >
+                              <Form.Control
+                                type="text"
+                                placeholder="License State"
+                              />
+                            </FloatingLabel>
+                            <FloatingLabel
+                              controlId="floatingInput"
+                              label="License No."
+                            >
+                              <Form.Control
+                                type="text"
+                                placeholder="License No."
+                              />
+                            </FloatingLabel>
+                            <FloatingLabel
+                              controlId="floatingInput"
+                              label="Security No."
+                            >
+                              <Form.Control
+                                type="text"
+                                placeholder="Security No."
+                              />
+                            </FloatingLabel>
+                            <FloatingLabel
+                              controlId="floatingInput"
+                              label="Birthday"
+                            >
+                              <Form.Control
+                                type="text"
+                                placeholder="Birthday"
+                              />
+                            </FloatingLabel>
+                          </div>
                         </div>
-                      </div>
-                      <div className="gsb-comb-info">
-                        <h5>Vehicle Info</h5>
-                        <div className="gsb-3-boxes">
-                          <FloatingLabel controlId="floatingInput" label="Make">
-                            <Form.Control type="text" placeholder="Make" />
-                          </FloatingLabel>
-                          <FloatingLabel
-                            controlId="floatingInput"
-                            label="Model"
-                          >
-                            <Form.Control type="text" placeholder="Model" />
-                          </FloatingLabel>
-                          <FloatingLabel
-                            controlId="floatingInput"
-                            label="Color"
-                          >
-                            <Form.Control type="text" placeholder="Color" />
-                          </FloatingLabel>
+                      ) : null}
+
+                      {isFourthDataShowing ? (
+                        <div className="gsb-comb-info">
+                          <h5>Banking Info</h5>
+                          <div className="gsb-2-boxes">
+                            <FloatingLabel
+                              controlId="floatingInput"
+                              label="Account No."
+                            >
+                              <Form.Control
+                                type="text"
+                                placeholder="Account No."
+                              />
+                            </FloatingLabel>
+                            <FloatingLabel
+                              controlId="floatingInput"
+                              label="Routing No."
+                            >
+                              <Form.Control
+                                type="text"
+                                placeholder="Routing No."
+                              />
+                            </FloatingLabel>
+                          </div>
                         </div>
-                      </div>
-                      <Form.Check
-                        inline
-                        label="Do you have Insurance?"
-                        name="group1"
-                        type={"checkbox"}
-                        id={222}
-                      />
-                      <div className="gsb-comb-info">
-                        <h5>Driver License Info</h5>
-                        <div className="gsb-3-boxes">
-                          <FloatingLabel
-                            controlId="floatingInput"
-                            label="License State"
-                          >
-                            <Form.Control
-                              type="text"
-                              placeholder="License State"
-                            />
-                          </FloatingLabel>
-                          <FloatingLabel
-                            controlId="floatingInput"
-                            label="License No."
-                          >
-                            <Form.Control
-                              type="text"
-                              placeholder="License No."
-                            />
-                          </FloatingLabel>
-                          <FloatingLabel
-                            controlId="floatingInput"
-                            label="Security No."
-                          >
-                            <Form.Control
-                              type="text"
-                              placeholder="Security No."
-                            />
-                          </FloatingLabel>
-                        </div>
-                        <FloatingLabel
-                          controlId="floatingInput"
-                          label="Birthday"
+                      ) : null}
+
+                      {isFirstDataShowing ? (
+                        <button
+                          onClick={() => {
+                            setIsFirstDataShowing(false);
+                            setIsSecondDataShowing(true);
+                          }}
                         >
-                          <Form.Control type="text" placeholder="Birthday" />
-                        </FloatingLabel>
-                      </div>
-                      <div className="gsb-comb-info">
-                        <h5>Banking Info</h5>
-                        <div className="gsb-2-boxes">
-                          <FloatingLabel
-                            controlId="floatingInput"
-                            label="Account No."
+                          Next <MdEast />{" "}
+                        </button>
+                      ) : null}
+
+                      {isSecondDataShowing ? (
+                        <div className="driver-btn-box">
+                          <button
+                            onClick={() => {
+                              setIsFirstDataShowing(true);
+                              setIsSecondDataShowing(false);
+                            }}
                           >
-                            <Form.Control
-                              type="text"
-                              placeholder="Account No."
-                            />
-                          </FloatingLabel>
-                          <FloatingLabel
-                            controlId="floatingInput"
-                            label="Routing No."
+                            {" "}
+                            <MdWest /> Previous
+                          </button>
+                          <button
+                            onClick={() => {
+                              setIsSecondDataShowing(false);
+                              setIsThirdDataShowing(true);
+                            }}
                           >
-                            <Form.Control
-                              type="text"
-                              placeholder="Routing No."
-                            />
-                          </FloatingLabel>
+                            Next <MdEast />
+                          </button>
                         </div>
-                      </div>
-                      <button>Start Adventure</button>
+                      ) : null}
+
+                      {isThirdDataShowing ? (
+                        <div className="driver-btn-box">
+                          <button
+                            onClick={() => {
+                              setIsSecondDataShowing(true);
+                              setIsThirdDataShowing(false);
+                            }}
+                          >
+                            <MdWest /> Previous
+                          </button>
+                          <button
+                            onClick={() => {
+                              setIsThirdDataShowing(false);
+                              setIsFourthDataShowing(true);
+                            }}
+                          >
+                            Next <MdEast />
+                          </button>
+                        </div>
+                      ) : null}
+
+                      {isFourthDataShowing ? (
+                        <div className="driver-btn-box">
+                          <button
+                            onClick={() => {
+                              setIsThirdDataShowing(true);
+                              setIsFourthDataShowing(false);
+                            }}
+                          >
+                            {" "}
+                            <MdWest /> Previous
+                          </button>
+                          <button>
+                            Start Adventure <MdEast />
+                          </button>
+                        </div>
+                      ) : null}
                     </div>
                   </div>
 
@@ -419,6 +537,8 @@ const Home = () => {
                     <h1 className="cursive-text">
                       Searching For A Delivery Driver Job?
                     </h1>
+                    <img src={MHeroImg} alt="" />
+
                     <p>
                       You found the right place! If you want to be your own
                       boss, work on your time, no supervision, Make money When
@@ -537,7 +657,7 @@ const Home = () => {
                   </div>
                   <div className="qualifications-grid">
                     <div className="why-zuumdrop-grid-card">
-                      <h3 className="cursive-text">Deliver by Car 🚗</h3>
+                      <h3 className="cursive-text">Delivery by Car 🚗</h3>
                       <ul>
                         <li>Be at least 18 years old</li>
                         <li>Have a valid driver’s license in your name</li>
@@ -545,6 +665,8 @@ const Home = () => {
                           Submit your Social Security number for us to run a
                           background screening
                         </li>
+                        <li>Submit and upload vehicle registration</li>
+                        <li>Submit and upload insurance card</li>
                       </ul>
                     </div>
                     <div className="why-zuumdrop-grid-card">
@@ -578,7 +700,7 @@ const Home = () => {
                   <div className="hzw-grid">
                     <div data-speed={1.3} className="hzw-grid-card">
                       <span className="cursive-text">1</span>
-                      <img src={HZWImg1} alt="" />
+                      <img src={SSImg1} alt="" />
                       <h4 className="cursive-text">
                         LogIn On Your Mobile Device
                       </h4>
@@ -592,7 +714,7 @@ const Home = () => {
                     </div>
                     <div data-speed={1.2} className="hzw-grid-card">
                       <span className="cursive-text">2</span>
-                      <img src={HZWImg2} alt="" />
+                      <img src={SSImg2} alt="" />
                       <h4 className="cursive-text">You Deliver The Order</h4>
                       {/* <p>
                         The Merchant Accepts The Order And Prepares The Order.
@@ -601,10 +723,9 @@ const Home = () => {
                     <div data-speed={1.2} className="downarrow-box">
                       <img src={DownArrowImg} alt="" />
                     </div>
-
                     <div data-speed={1.1} className="hzw-grid-card">
                       <span className="cursive-text">3</span>
-                      <img src={HZWImg3} alt="" />
+                      <img src={SSImg3} alt="" />
                       <h4 className="cursive-text">Earn The Cash</h4>
                       {/* <p>
                         ZuumDrop Delivery Drivers AKA Droppers Picks Up Order &
@@ -687,7 +808,7 @@ const Home = () => {
                   </div>
                 </div>
                 <div className="footer-bottom-grid">
-                  <p>©2022 All Rights Reserved. ZuumDrop</p>
+                  <p>All Rights Reserved. © 2023 ZuumDrop</p>
                   <div></div>
                 </div>
               </div>

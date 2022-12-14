@@ -27,6 +27,7 @@ import ETImg11 from "../assets/img/et-11.png";
 import ETImg12 from "../assets/img/et-12.png";
 import ETImg13 from "../assets/img/et-13.png";
 import ETImg14 from "../assets/img/et-14.png";
+import MHeroImg from "../assets/img/m-hero.jpeg";
 import HZWImg1 from "../assets/img/hzw-img-1.png";
 import HZWImg2 from "../assets/img/hzw-img-2.png";
 import HZWImg3 from "../assets/img/hzw-img-3.png";
@@ -139,6 +140,20 @@ const Home = () => {
           duration: 1,
         },
         "<0.25"
+      )
+      .fromTo(
+        ".merchant-hero-grid-left > img",
+        {
+          y: "7.5rem",
+          opacity: 0,
+        },
+        {
+          y: 0,
+          opacity: 1,
+          ease: Power4.easeInOut,
+          duration: 1,
+        },
+        "<0.05"
       )
       .fromTo(
         ".merchant-hero-grid-left > p",
@@ -305,7 +320,7 @@ const Home = () => {
                       </div>
                       <div className="merchant-cc">
                         <InputGroup>
-                          <Form.Select aria-label="Business Type">
+                          <Form.Select aria-label="Country">
                             <option value="1">US</option>
                             <option value="2">PK</option>
                             <option value="3">AU</option>
@@ -337,9 +352,12 @@ const Home = () => {
                       </FloatingLabel>
 
                       <Form.Select aria-label="Business Type">
-                        <option value="1">Business Type</option>
-                        <option value="2">Two</option>
-                        <option value="3">Three</option>
+                        <option value="Business Type">Business Type</option>
+                        <option value="Resturant">Resturant</option>
+                        <option value="Grocery">Grocery</option>
+                        <option value="Convenience">Convenience</option>
+                        <option value="Pet Store">Pet Store</option>
+                        <option value="Flower Store">Flower Store</option>
                       </Form.Select>
                       <Form.Check
                         inline
@@ -357,6 +375,7 @@ const Home = () => {
                       You Set Your Goals For Your Business And Now It’s Time To
                       Help You Accomplish Them.
                     </h1>
+                    <img src={MHeroImg} alt="" />
                     <p>
                       ZuumDrop Tech Platform Will Provide You The Data, To Drive
                       You More Sales Insights To Reach More Customers.
@@ -630,7 +649,7 @@ const Home = () => {
                   </div>
                 </div>
                 <div className="footer-bottom-grid">
-                  <p>©2022 All Rights Reserved. ZuumDrop</p>
+                  <p>All Rights Reserved. © 2023 ZuumDrop</p>
                   <div></div>
                 </div>
               </div>

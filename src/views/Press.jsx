@@ -205,7 +205,7 @@ const Home = () => {
                 other inquiries, visit our contact page.
               </p>
             </section>
-            <section className="press-grid-section">
+            {/*  <section className="press-grid-section">
               <div className="box">
                 <div className="press-grid">
                   <div className="press-grid-card">
@@ -273,9 +273,9 @@ const Home = () => {
                   </div>
                 </div>
               </div>
-            </section>
+            </section> */}
 
-            <footer>
+            {/* <footer>
               <div className="box">
                 <div className="footer-top-grid">
                   <div className="footer-top-grid-left">
@@ -315,11 +315,11 @@ const Home = () => {
                   </div>
                 </div>
                 <div className="footer-bottom-grid">
-                  <p>©2022 All Rights Reserved. ZuumDrop</p>
+                  <p>All Rights Reserved. © 2023 ZuumDrop</p>
                   <div></div>
                 </div>
               </div>
-            </footer>
+            </footer> */}
           </main>
         </div>
       </div>
