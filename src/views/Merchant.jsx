@@ -27,7 +27,7 @@ import ETImg11 from "../assets/img/et-11.png";
 import ETImg12 from "../assets/img/et-12.png";
 import ETImg13 from "../assets/img/et-13.png";
 import ETImg14 from "../assets/img/et-14.png";
-import MHeroImg from "../assets/img/m-hero-2.png";
+import MHeroImg from "../assets/img/m-hero-2.jpeg";
 import HZWImg1 from "../assets/img/hzw-img-1.png";
 import HZWImg2 from "../assets/img/hzw-img-2.png";
 import HZWImg3 from "../assets/img/hzw-img-3.png";
@@ -644,7 +644,7 @@ const Home = () => {
                   </div>
                 </div>
                 <div className="footer-bottom-grid">
-                  <p>All Rights Reserved. © 2023 ZuumDrop</p>
+                  <p> © 2023 ZuumDrop</p>
                   <div></div>
                 </div>
               </div>

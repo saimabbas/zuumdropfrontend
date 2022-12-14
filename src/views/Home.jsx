@@ -733,7 +733,7 @@ const Home = () => {
                   </div>
                 </div>
                 <div className="footer-bottom-grid">
-                  <p>All Rights Reserved. © 2023 ZuumDrop</p>
+                  <p> © 2023 ZuumDrop</p>
                   <div></div>
                 </div>
               </div>
