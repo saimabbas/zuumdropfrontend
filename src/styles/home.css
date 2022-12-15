@@ -68,7 +68,7 @@
   width: 65%;
   position: relative;
   z-index: 152;
-  padding: 10rem 0 5rem 0;
+  padding: 0 0 5rem 0;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -787,6 +787,9 @@ footer {
   }
 }
 @media screen and (max-width: 775px) {
+  .hero-section-content {
+    min-height: 75vh;
+  }
   .press-hero-section h1 {
     font-size: 3rem;
   }

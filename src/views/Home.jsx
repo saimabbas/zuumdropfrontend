@@ -266,7 +266,7 @@ const Home = () => {
                     </h1>
                   </div>
 
-                  <div>
+                  {/*  <div>
                     <button>
                       <span>
                         <img src={ETImg4} alt="" />
@@ -274,7 +274,7 @@ const Home = () => {
                         <img src={ETImg1} alt="" />
                       </span>
                     </button>
-                  </div>
+                  </div> */}
                   <div className="appstores-container">
                     <p>DOWNLOAD THE APP by clicking the buttons below:</p>
                     <div className="hero-appstores-box">
@@ -513,8 +513,8 @@ const Home = () => {
                       <h4 className="cursive-text">Merchant Prepares Order </h4>
                       <p>
                         The Restaurant Accepts The Order And Prepares The Order.
-                        For Grocery Delivery ZuumDrop Prepares The Order From
-                        Its Micro Store.
+                        For Convenience Grocery Items ZuumDrop Prepares The
+                        Order From its Micro Store.
                       </p>
                     </div>
                     <div data-speed={1.2} className="downarrow-box">
