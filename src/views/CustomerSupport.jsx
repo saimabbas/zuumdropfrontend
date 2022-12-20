@@ -203,7 +203,7 @@ const CustomerSupport = () => {
                   <h5>We're here to help.</h5>
                   <p>
                     Have an issue with an order or feedback for us? Our support
-                    team is here to help you from 6 am to 2 am.
+                    team is here to help you from 8am to 2am.
                   </p>
                   <div className="cust-sup-grid">
                     <div className="cs-grid-content">
