@@ -1127,6 +1127,8 @@ const Home = () => {
                     <a href="/">Home</a>
                     <a href="#">Delivery Areas</a>
                     <a href="/press">Press</a>
+                    <a href="/contactus">Contact Us</a>
+                    <a href="/customersupport">Customer Support</a>
                     <a href="/termsofuse">Terms of Use</a>
                     <a href="/privacypolicy">Privacy Policy</a>
                   </div>
@@ -1154,9 +1156,6 @@ const Home = () => {
             </footer>
           </main>
         </div>
-      </div>
-      <div className="chat-icon">
-        <BsChatLeftDotsFill />
       </div>
     </div>
   );

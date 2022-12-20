@@ -12,6 +12,8 @@ import {
   Router,
   useLocation,
 } from "react-router-dom";
+import CustomerSupport from "./views/CustomerSupport";
+import ContactUs from "./views/ContactUs";
 
 function App() {
   return (
@@ -24,6 +26,8 @@ function App() {
           <Route exact path="/privacypolicy" element={<PrivacyPolicy />} />
           <Route exact path="/termsofuse" element={<TermsOfUse />} />
           <Route exact path="/press" element={<Press />} />
+          <Route exact path="/customersupport" element={<CustomerSupport />} />
+          <Route exact path="/contactus" element={<ContactUs />} />
         </Routes>
       </Switch>
     </>

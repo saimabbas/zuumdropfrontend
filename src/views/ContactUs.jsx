@@ -58,7 +58,7 @@ import { SplitText } from "gsap/SplitText";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { ScrollSmoother } from "gsap/ScrollSmoother";
 import Marquee from "react-marquee-slider";
-import { MdClose, MdMenu, MdEast } from "react-icons/md";
+import { MdClose, MdMenu, MdEast, MdEmail } from "react-icons/md";
 import { IoLocationOutline, IoSearchOutline } from "react-icons/io5";
 import {
   BsArrowRight,
@@ -75,7 +75,7 @@ import {
 import { Swiper, SwiperSlide } from "swiper/react";
 import { EffectCoverflow, Pagination, Autoplay } from "swiper";
 
-const Home = () => {
+const ContactUs = () => {
   const [isHeaderMobShowing, setIsHeaderMobShowing] = useState(false);
   gsap.registerPlugin(SplitText, ScrollSmoother, ScrollTrigger);
   const defaultOptions = {
@@ -126,7 +126,6 @@ const Home = () => {
       }
     );
   }, []);
-
   return (
     <div id="smooth-wrapper">
       <div id="smooth-content">
@@ -159,7 +158,7 @@ const Home = () => {
                       </div>
 
                       {/* <button>Sign Up</button>
-                      <button>Sign In</button> */}
+                    <button>Sign In</button> */}
                     </div>
                   </div>
                 </div>
@@ -196,85 +195,28 @@ const Home = () => {
                   </div>
                 ) : null}
               </header>
-              <h1 className="cursive-text">Media Inquiries</h1>
-              <p>
-                For the latest news, please contact{" "}
-                <a href="#">contact@zuumdrop.com</a>
-                <br />
-                Please note, we will only reply to members of the press.
-              </p>
+              <h1 className="cursive-text">Contact Us</h1>
             </section>
-            {/*  <section className="press-grid-section">
+            <section className="pp-section">
               <div className="box">
-                <div className="press-grid">
-                  <div className="press-grid-card">
-                    <img src={FDBImg} alt="" />
-                    <div className="press-grid-card-content">
-                      <div className="pgcc-top">
-                        <img src={PressLogo} alt="" />
-                        <span>Nov 12, 2021</span>
-                      </div>
-                      <h3 className="cursive-text">
-                        Grocery delivery app Zepto raises $60 mn led by Glade
-                        Brook Capital
-                      </h3>
-                      <p>
-                        Kiranakart Technologies Pvt Ltd, which runs Zepto, a
-                        10-minute grocery delivery app, said it has raised $60
-                        million (around Rs 444 crore)...
-                      </p>
-                      <a href="#">
-                        Read More <MdEast />
-                      </a>
-                    </div>
-                  </div>
-                  <div className="press-grid-card">
-                    <img src={FDBImg} alt="" />
-                    <div className="press-grid-card-content">
-                      <div className="pgcc-top">
-                        <img src={PressLogo} alt="" />
-                        <span>Nov 12, 2021</span>
-                      </div>
-                      <h3 className="cursive-text">
-                        Grocery delivery app Zepto raises $60 mn led by Glade
-                        Brook Capital
-                      </h3>
-                      <p>
-                        Kiranakart Technologies Pvt Ltd, which runs Zepto, a
-                        10-minute grocery delivery app, said it has raised $60
-                        million (around Rs 444 crore)...
-                      </p>
-                      <a href="#">
-                        Read More <MdEast />
-                      </a>
-                    </div>
-                  </div>
-                  <div className="press-grid-card">
-                    <img src={FDBImg} alt="" />
-                    <div className="press-grid-card-content">
-                      <div className="pgcc-top">
-                        <img src={PressLogo} alt="" />
-                        <span>Nov 12, 2021</span>
-                      </div>
-                      <h3 className="cursive-text">
-                        Grocery delivery app Zepto raises $60 mn led by Glade
-                        Brook Capital
-                      </h3>
-                      <p>
-                        Kiranakart Technologies Pvt Ltd, which runs Zepto, a
-                        10-minute grocery delivery app, said it has raised $60
-                        million (around Rs 444 crore)...
-                      </p>
-                      <a href="#">
-                        Read More <MdEast />
-                      </a>
-                    </div>
-                  </div>
+                <div className="contactus-box">
+                  <h5>What’s ZuumDrop?</h5>
+                  <p>
+                    ZuumDrop Is A SuperApp For All Things Delivery. From
+                    Resturant Delivery To Instant Convenience Grocery Items,
+                    Household Essentials, Snacks, Beverages Were An All -In-One
+                    Delivery Platform.
+                  </p>
+                  <h6>ZuumDrop Delivery Fee?</h6>
+                  <p>Grocery Delivery Fee As Low As $3.75</p>
+                  <p>Resturant Delivery Fee Ranges $1.50 - $5.00</p>
+                  <h6>Contact Us</h6>
+                  <a href="#">info@zuumdrop.com</a>
                 </div>
               </div>
-            </section> */}
+            </section>
 
-            {/* <footer>
+            <footer>
               <div className="box">
                 <div className="footer-top-grid">
                   <div className="footer-top-grid-left">
@@ -294,6 +236,8 @@ const Home = () => {
                     <a href="/">Home</a>
                     <a href="#">Delivery Areas</a>
                     <a href="/press">Press</a>
+                    <a href="/contactus">Contact Us</a>
+                    <a href="/customersupport">Customer Support</a>
                     <a href="/termsofuse">Terms of Use</a>
                     <a href="/privacypolicy">Privacy Policy</a>
                   </div>
@@ -318,7 +262,7 @@ const Home = () => {
                   <div></div>
                 </div>
               </div>
-            </footer> */}
+            </footer>
           </main>
         </div>
       </div>
@@ -326,11 +270,4 @@ const Home = () => {
   );
 };
 
-export default Home;
-{
-  /* <div className="search-box">
-                <IoLocationOutline />
-                <input type="text" placeholder="Enter Delivery Address" />
-                <IoSearchOutline />
-              </div> */
-}
+export default ContactUs;
